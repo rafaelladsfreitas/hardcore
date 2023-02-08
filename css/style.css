@@ -1,0 +1,478 @@
+:root{
+    --primary: #101417;
+    --contrast: #B91F33;
+    --gray-light: #E1E1E1;
+    --gray-medium: #666666;
+
+}
+*{
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase; /*coloca o texto em maiusculo*/ 
+}
+
+html{
+    scroll-behavior: smooth; /*navegaçao ficar suave*/
+}
+
+#academia, #planos, #contato{
+    scroll-margin-top: 99px; /*era 100px mas coloquei 99 por conta da linha branca de planos*/
+}
+
+body{
+    margin: 0; 
+    background-color: var(--primary);
+}
+
+img{
+    /*a imagem se comporta como um objeto em linha e para retirar o espaço que já vem naturalmente em todas as imagens colocamos para ele se comportar em bloco*/
+    display: block;
+}
+/*quando colocamos aqui em cima sem especificar a classe, estamos assumindo essas características para todos o h2 e p que aparecer no meu site*/
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+h2,h3{
+    margin: 0;/*todos os títulos já vem com margem por padrão por isso que é bom zerar a margem dos títulos*/
+    font-size: 40px;
+    color: #FFFF;
+    /*font-weight: 700; os títulos h1-h6 já vem com o negrito/bold*/
+}
+
+h3{
+    font-size: 32px;
+}
+
+p{
+    color: var(--gray-light);
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.header{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px); /*para colocar um blur*/
+    padding-top: 16px;
+    padding-bottom: 16px; /*outra forma de escrever o padding seria: padding: 16px 0; funcionaria da mesma forma*/
+    position: fixed;
+    top: 0;
+    z-index: 1000; /*assumimos o valor de 1000 pois quanto maior o número maior será a relevância para aparecer na frente, por cima de outros elementos*/
+}
+
+.container{
+    /* background-color: blue; */
+    width: 1140px;
+    margin: 0 auto; /*centralizando o container*/
+}
+
+/* Formatando o container que está DENTRO do header */
+.header .container{
+    display: flex;
+    justify-content: space-between; /*alinhando no eixo X */
+    align-items: center; /*alinhando no eixo Y*/
+
+}
+
+.menu a{
+    color: #FFFF;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 110px;
+
+}
+
+.menu a:hover{
+    color: var(--contrast);
+}
+
+/*retirando borda e sombra que vem no bxslider*/
+.bx-wrapper{
+    border: none;
+    box-shadow: none;
+}
+
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{
+    bottom: 20px;
+}
+
+
+.bg-1{
+    background-image: url(../img/background.jpg);
+}
+
+.bg-2{
+    background-image: url(../img/background-2.jpg);
+}
+
+.hero-section{
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+
+    display: flex; /*sempre que eu quero ativar o flexbox eu coloco essa propriedade*/
+    align-items: center;
+}
+
+.hero-section .container{
+    position: relative;
+    top: 52px;
+}
+
+.hero-section h1{
+    margin: 0; /*zerar a margem do texto porque ele já vem com uma margem padrão*/
+    max-width: 946px; /*eu vejo no figma o tamanho de largura do texto e coloco que o máximo de largura que ele iria chegar é de 946px*/
+    font-size: 96px; /*tamanho da fonte no figma. Vale lembrar que H1 é o tamanho de relevância do seu texto no site*/
+    color: var(--gray-light);
+    line-height: 90%; /*diminuir a altura entre linhas no texto, verificar no figma o espaçamento entre linhas. É o mesmo nome no figma*/
+
+}
+
+.hero-section p{
+    font-size: 24px;
+    line-height: 120%;
+    max-width: 655px;
+    color: var(--gray-light);
+}
+
+.hero-section a{
+    color: #FFFF;
+    background-color: var(--contrast);
+    text-decoration: none; /*tirar o sublinhado do link*/
+    font-size: 18px;
+    padding: 13px 44px 9px 44px; /*top right bottom left*/
+    border-radius: 3px;
+    display: inline-block;
+
+}
+
+.nossa-academia{ /*chamamos aqui só 'nossa academia' mas olhando no html ele tem as configurações do conteiner mais o do 'nossa academia' porém aqui eu só preciso colocar nossa academia uma vez que não colocamos div envolvendo nossa academia pois ele está no fundo do body*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1140px;
+    column-gap: 24px; /*espaço entre as colunas do flexbox*/
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.faca-parte{
+    background-color: var(--gray-light);
+    padding: 37px 0; /*o espaço entre o texto e a div do conteiner dentro do faça parte. Não é margin e sim padding porque precisamos do espaço dentro da div e não fora*/
+}
+
+.faca-parte h2{
+    color: #222222;
+}
+
+.faca-parte p{
+    color: var(--gray-medium);
+    max-width: 850px;
+    margin-bottom: 0; /*margem é sempre em relação a algo para fora. Aqui eu estou retirando a margem debaixo do paragrafo para grudar a imagem do atleta*/
+}
+
+.faca-parte .container{
+    /*colocando o position no container para ele servir de referência para a imagem do atleta*/
+    position: relative;
+}
+
+.imagem-atleta{
+    /*posição em relação ao elemento pai (desde que ele tenha position)
+    caso contrário, o body será usado como referência*/
+    position: absolute;
+    right: 0;
+    bottom:-37px; /*valor do padding para o atleta descer*/
+}
+
+.planos{
+    width: 100%;
+    height: auto;
+    background-image: url(../img/bg-planos.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.flex-cards{
+    display: flex;
+    column-gap: 24px; /*espaço entre as colunas*/
+}
+
+.card-plano{
+    background-color: rgba(0, 0, 0, 0.3);
+    border: solid 1px var(--gray-light);
+    padding: 30px;
+    border-radius: 3px;
+    transition: 0.5s !important;
+}
+
+.card-plano:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.03) !important;
+}
+
+.card-destaque{
+    border:solid 3px var(--contrast);
+}
+
+.card-destaque .preco{
+    color: #E0E34C;
+}
+
+.preco{
+    font-size: 32px;
+    font-weight: 700;
+    color:var(--gray-light);
+}
+
+.card-plano ul{
+    text-align: left;
+    padding: 0; /*a lista tem um espaçamento padrão por isso devemos zerar o padding */
+    list-style-position: inside;
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--gray-light);
+}
+
+
+.btn{
+    color: #FFFF;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px 45px 7px 45px;
+    border-radius: 3px;
+    border: 2px solid transparent; /*essa borda foi porque o botão do plano do meio, o anual estava um pouco mais abaixo dos os dois da ponta. Para colocar eles na mesma altura aplica a borda transparente*/
+    transition: 0.5s;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--primary);
+    border: solid 2px var(--gray-light);
+}
+
+.btn-outline{
+border: solid 2px var(--contrast);
+}
+
+.btn-fill{
+background-color: var(--contrast);
+}
+
+.btn-block{
+    display: block;
+}
+
+.fale-conosco{
+    padding: 100px 0; /*100 embaixo e 100 em cima e 0 do lado e do outro*/
+    display:flex;
+    justify-content: space-between;
+}
+
+.conteudo-form{
+    width: 558px;
+}
+
+.conteudo-form form{
+    margin-top: 21px;
+}
+
+.conteudo-form input, .conteudo-form textarea{
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 10px;
+    padding: 10px 10px 7px 10px; /*to right bottom left*/
+    border: solid 1px var(--gray-light);
+    border-radius: 3px;
+    font-size: 18px;
+    color: var(--gray-light);
+    /*borda e padding (faz o elemento expandir)*/
+    box-sizing: border-box; /*faz com que a borda e o padding não modifique as dimensões do elemento*/
+}
+
+.conteudo-form textarea{
+    height: 140px;
+}
+
+.footer{
+    background-color: var(--contrast);
+    color: white;
+    text-align: center;
+    padding: 15px 194px 10px 194px; /*10px embaixo por conta do espaço, a margem padrão que já tem na fonte escolhida*/
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.midias{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 1140px){
+
+    .container{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box; /*faz com que o padding/border não acrescente valor as dimensões*/
+    }
+
+    .conteudo-faca-parte{
+        width: calc(100% - 195px);
+    }
+
+    .fale-conosco{
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    .conteudo-form, .mapa, iframe{
+        width: 100%;
+    }
+}
+
+@media (max-width: 950px){
+
+    h2{
+        font-size: 32px;
+    }
+
+    h3{
+        font-size: 24px;
+    }
+
+    .menu{
+        /* display: none; */
+        transform: translateX(-100%);
+        transition: 1s;
+        background-color: var(--contrast);
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 60%;
+        height: 100vh;
+    }
+
+    /*classe acionada pelo JS*/
+    .menu-open{
+        /* display: block; */
+        transform: translate(0);
+    }
+    .menu a{
+        display: block;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .menu a:hover{
+        background-color: var(--primary);
+    }
+
+    .bar{
+        width: 40px;
+        height: 3px;
+        background-color: white;
+        margin-bottom: 3px;
+        transition: 0.5s;
+    }
+
+    /*classe adicionada pelo JS*/
+    .x .bar:first-child{
+        transform: rotate(45deg) translate(8px, 2px);
+    }
+
+    .x .bar:last-child{
+        transform: rotate(-45deg) translate(6px, 0);
+    }
+
+    .x .bar:nth-child(2){
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    .hero-section{
+        height: 520px;
+    }
+
+    .hero-section h1{
+        font-size: 36px;
+    }
+    
+    .hero-section p{
+        font-size: 20px;
+    }
+
+
+    .nossa-academia{
+        /*alterando os eixos (justify-content e align-items se invertem)*/
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    .aluno img{
+        max-width: 100%;
+    }
+
+    .flex-cards{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 24px;
+
+    }
+
+    .card-plano{
+        max-width: 500px;
+    }
+
+    .footer{
+        padding: 15px 15px 10px 15px;
+    }
+
+    
+}
+
+@media (max-width: 560px){
+
+    .imagem-atleta{
+        display:none;
+    }
+
+    .conteudo-faca-parte{
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+/*
+position:relative;
+Posição em relação ao próprio elemento
+
+position: absolute;
+Posição em relação ao elemento pai (desde que o elemento pai tenha position)
+caso contrário, o body será usado com elemento pai
+
+position: fixed;
+Posição fixa em relação ao body
+*/
+
+
+
+
+
+
+

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia HardCore</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">  <!--lembrar de deixar o meu css semp0re por último-->
+
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+          $('.slider').bxSlider({
+            auto: true,
+            /*aqui usa mili segundos 6000= 6 segundos*/
+            pause: 6000, 
+          });
+        });
+      </script>
+
+</head>
+
+<body>
+
+    <header class="header"> <!--é todo o cabeçalho do site da academia-->
+
+        <div class="container">
+
+            <div class="logo">
+                <img src="img/logo.svg" alt="">
+            </div>
+
+            <div class="btn-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <nav class="menu">
+                <a href="#">Início</a>
+                <a href="#academia">Nossa Academia</a>
+                <a href="#planos">Planos</a>
+                <a href="#contato">Fale Conosco</a>
+            </nav>
+
+        </div>
+
+    </header> <!--fim do header-->
+
+    <div class="slider">
+
+        <div class="hero-section bg-1">
+
+            <div class="container">
+                <h1 data-aos="fade-right">Lorem ipsum dolor sit amet, consectetur</h1>
+
+                <p data-aos="fade-right" data-aos-delay="300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur ligula ut ornare.
+                    Pellentesque vulputate dictum nibh eget tempus. Integer accumsan tellus sed massa faucibus, in eleifend
+                    lorem placerat.</p>
+
+                <a href="#" data-aos="fade-right" data-aos-delay="600">Lorem ipsum</a>
+            </div>
+        </div>
+
+        <div class="hero-section bg-2">
+
+            <div class="container">
+                <h1>Lorem ipsum dolor sit amet, consectetur</h1>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur ligula ut ornare.
+                    Pellentesque vulputate dictum nibh eget tempus. Integer accumsan tellus sed massa faucibus, in eleifend
+                    lorem placerat.</p>
+
+                <a>Lorem ipsum</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container nossa-academia" id="academia">
+        <!--é uma outra forma de chamar duas classes em uma quando não tem a ncessidade de criar uma div envolovendo todo o conteúdo pois no nosso caso o nossa academia já ta no body-->
+
+        <div class="aluno" data-aos="fade-right">
+            <img src="img/aluno.jpg" alt="">
+        </div>
+
+        <div class="texto-academia" alt=""  data-aos="fade-up">
+            <h2>Nossa Academia</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, ac lacinia lorem
+                pellentesque id. Morbi tincidunt malesuada vestibulum. Praesent at diam eros. Integer tempus vitae urna
+                et rhoncus. Proin congue turpis ac felis tincidunt congue. Duis tincidunt dui eu malesuada convallis. In
+                vel est feugiat, interdum ante iaculis, ultricies turpis</p>
+            <p>Sed quis pharetra ligula, sit amet porttitor odio.
+                Sed nec quam euismod, interdum justo quis, efficitur eros. Pellentesque habitant morbi tristique
+                senectus et netus et malesuada fames ac turpis egestas. Nulla condimentum, nulla nec tempor euismod,
+                purus elit accumsan erat, non luctus purus arcu ac sapien. Phasellus tellus libero, elementum vel nibh
+                eget, rutrum.</p>
+        </div>
+    </div>
+
+    <div class="faca-parte">
+
+        <div class="container">
+
+            <div class="conteudo-faca-parte">
+            <h2>Faça parte do time</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, ac lacinia lorem
+                pellentesque id. Morbi tincidunt malesuada vestibulum. Praesent at diam eros. Integer tempus vitae urna
+                et rhoncus. Proin congue turpis ac felis tincidunt congue. Duis tincidunt dui eu malesuada convallis. In
+                vel est feugiat, interdum ante iaculis, ultricies turpis. </p>
+            </div>    
+
+            <div class="imagem-atleta">
+                <img src="img/atleta.png" alt="">
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="planos" id="planos">
+        <div class="container">
+            <h2>Nossos Planos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, ac lacinia
+                lorem pellentesque id. Morbi tincidunt malesuada vestibulum. Praesent at diam eros. Integer tempus
+                vitae urna et rhoncus. Proin congue turpis ac felis tincidunt congue. Duis tincidunt dui eu
+                malesuada convallis.</p>
+
+            <div class="flex-cards">
+
+                <article class="card-plano" data-aos="fade-down">
+                    <h3>Plano Mensal</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu,</p>
+
+                    <span class="preco">R$64,90</span>
+
+                    <ul>
+                        <li>Lorem ipsum dolor Vestibulum ante</li>
+                        <li>sit amet, consecte ante </li>
+                        <li>tur adipiscing elit primis in faucibus </li>
+                        <li>Donec porttitor primis in </li>
+                        <li>interdum arcuultrices posuere </li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-block">Lorem Ipsum</a>
+                </article>
+
+                <article class="card-plano card-destaque" data-aos="fade-down">
+                    <h3>Plano Anual</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu,</p>
+
+                    <span class="preco">R$49,90</span>
+
+                    <ul>
+                        <li>Lorem ipsum dolor Vestibulum ante</li>
+                        <li>sit amet, consecte ante </li>
+                        <li>tur adipiscing elit primis in faucibus </li>
+                        <li>Donec porttitor primis in </li>
+                        <li>interdum arcuultrices posuere </li>
+                    </ul>
+                    <a href="#" class="btn btn-fill btn-block">Lorem Ipsum</a>
+                </article>
+
+                <article class="card-plano" data-aos="fade-down">
+                    <h3>Plano Semestral</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu,</p>
+
+                    <span class="preco">R$54,90</span>
+
+                    <ul>
+                        <li>Lorem ipsum dolor Vestibulum ante</li>
+                        <li>sit amet, consecte ante </li>
+                        <li>tur adipiscing elit primis in faucibus </li>
+                        <li>Donec porttitor primis in </li>
+                        <li>interdum arcuultrices posuere </li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-block">Lorem Ipsum</a>
+                </article>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container fale-conosco" id="contato">
+
+        <div class="conteudo-form">
+            <h2>Fale com a Hard Core</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, ac lacinia lorem
+                pellentesque id. Morbi tincidunt malesuada vestibulum. Praesent at diam eros.</p>
+
+            <form action="#">
+
+                <input type="text" placeholder="Digite seu nome" required>
+                <input type="email" placeholder="Digite seu e-mail" required>
+                <input type="tel" placeholder="Digite seu telefone" required minlength="3">
+
+                <textarea placeholder="Digite sua mensagem" minlength="10" maxlength="150"></textarea>
+
+                <button class="btn btn-outline">Lorem Ipsum</button>
+
+            </form>
+        </div>
+
+        <div class="mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.159647416229!2d-43.17867878540055!3d-22.907481643653952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f606640bb73%3A0x1ef710745c1fc7cc!2sAv.%20Rio%20Branco%2C%20185%20-%20Centro%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020040-007!5e0!3m2!1spt-BR!2sbr!4v1674831365049!5m2!1spt-BR!2sbr"
+                width="558" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <footer class="container">
+
+        <div class="footer">
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac erat tincidunt, feugiat magna sit
+                amet, ornare ligula. pulvinar pretium Maecenas ac arcu imperdiet, porta mi sed, consectetur ante.</span>
+        </div>
+        <div class="midias">
+            <a href="https://twitter.com/" target="_blank"><img src="img/twitter.svg" alt=""></a>
+            <a href="https://youtube.com/" target="_blank"><img src="img/youtube.svg" alt=""></a>
+            <a href="https://facebook.com/" target="_blank"><img src="img/facebook.svg" alt=""></a>
+        </div>
+
+    </footer>
+
+    <!--ligação entre HTML e JS-->
+    <script src="js/script.js"></script>
+    <script src="js/aos.js"></script>
+
+    <script>
+        AOS.init({
+            offset: -500,
+            once: true,
+        });
+    </script>
+</body>
+
+</html>
